@@ -11,12 +11,12 @@ services:
       - /home/root/bitwarden/data:/data
     labels:
       - 'traefik.enable=true'
-      - 'traefik.http.routers.bitwarden.entrypoints=web'
-      - 'traefik.http.routers.bitwarden.rule=Host(`apple-shortcut-create-notion-todo.zetkin.4lus.de`)' ## Hier anpassen ##
-      - 'traefik.http.routers.bitwarden.middlewares=redirect@file'
-      - 'traefik.http.routers.bitwarden-secured.entrypoints=web-secured'
-      - 'traefik.http.routers.bitwarden-secured.rule=Host(`apple-shortcut-create-notion-todo.zetkin.4lus.de`)' ## Hier anpassen ##
-      - 'traefik.http.routers.bitwarden-secured.tls.certresolver=mytlschallenge'
+      - 'traefik.http.routers.apple-shortcut-create-notion-todo.entrypoints=web'
+      - 'traefik.http.routers.apple-shortcut-create-notion-todo.rule=Host(`apple-shortcut-create-notion-todo.zetkin.4lus.de`)' ## Hier anpassen ##
+      - 'traefik.http.routers.apple-shortcut-create-notion-todo.middlewares=redirect@file'
+      - 'traefik.http.routers.apple-shortcut-create-notion-todo-secured.entrypoints=web-secured'
+      - 'traefik.http.routers.apple-shortcut-create-notion-todo-secured.rule=Host(`apple-shortcut-create-notion-todo.zetkin.4lus.de`)' ## Hier anpassen ##
+      - 'traefik.http.routers.apple-shortcut-create-notion-todo-secured.tls.certresolver=mytlschallenge'
     networks:
       - web
 
