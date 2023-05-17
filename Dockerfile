@@ -10,4 +10,4 @@ RUN yarn build
 FROM node:latest
 WORKDIR /app
 COPY --from=build /app/dist/* /app/
-CMD ["node app.js"]
+CMD ["app.js"]
