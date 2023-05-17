@@ -7,3 +7,4 @@ RUN yarn
 COPY tsconfig.json /app 
 RUN yarn build
 CMD ["dist/app.js"]
+EXPOSE 80
