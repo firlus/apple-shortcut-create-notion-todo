@@ -1,4 +1,4 @@
-FROM node:latest as build
+FROM node:latest 
 WORKDIR /app
 COPY package.json /app
 COPY yarn.lock /app 
@@ -6,8 +6,4 @@ COPY src/ /app/src
 RUN yarn
 COPY tsconfig.json /app 
 RUN yarn build
-
-FROM node:latest
-WORKDIR /app
-COPY --from=build /app/dist/* /app/
-CMD ["app.js"]
+CMD ["dist/app.js"]
