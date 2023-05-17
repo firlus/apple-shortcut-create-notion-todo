@@ -2,7 +2,7 @@ FROM node:latest as build
 WORKDIR /app
 COPY package.json /app
 COPY yarn.lock /app 
-COPY src/ /app
+COPY src/ /app/src
 RUN yarn
 COPY tsconfig.json /app 
 RUN yarn build
